@@ -71,9 +71,11 @@ app.get('/login', function (req, res) {
   res.render('login', { user: req.user });
 });
 
-app.get('/logout', function (req, res) {
-  req.logout();
-  res.redirect('/');
+app.get('/', (req, res, next) => {
+  req.logout((err) => {
+    if (err) return next(err);
+    res.redirect('/');
+  });
 });
 
 function ensureAuthenticated(req, res, next) {
