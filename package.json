@@ -6,23 +6,26 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "damage-calc": "git+https://github.com/progedu/damage-calc-4006.git",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
+    "cookie-parser": "1.4.6",
+    "damage-calc": "https://github.com/nnn-training/damage-calc-4006.git",
+    "debug": "4.3.4",
+    "express": "4.18.2",
     "express-session": "1.17.3",
-    "helmet": "5.0.2",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
+    "helmet": "6.1.5",
+    "http-errors": "2.0.0",
+    "morgan": "1.10.0",
     "passport": "0.6.0",
     "passport-github2": "0.1.12",
     "pug": "3.0.2"
   },
   "devDependencies": {
-    "@babel/core": "7.17.5",
-    "babel-loader": "8.2.3",
-    "@babel/preset-env": "7.16.11",
-    "webpack": "5.69.1",
-    "webpack-cli": "4.9.2"
+    "@babel/core": "7.21.4",
+    "@babel/preset-env": "7.21.4",
+    "babel-loader": "9.1.2",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0",
+    "webpack": "5.80.0",
+    "webpack-cli": "5.0.1"
   }
 }
