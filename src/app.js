@@ -8,6 +8,7 @@ const { secureHeaders } = require("hono/secure-headers");
 const { env } = require("hono/adapter");
 const { serve } = require("@hono/node-server");
 const { serveStatic } = require("@hono/node-server/serve-static");
+const { trimTrailingSlash } = require("hono/trailing-slash");
 const { githubAuth } = require("@hono/oauth-providers/github");
 const { getIronSession } = require("iron-session");
 const layout = require("./layout");
@@ -21,6 +22,7 @@ const app = new Hono();
 app.use(logger());
 app.use(serveStatic({ root: "./public" }));
 app.use(secureHeaders());
+app.use(trimTrailingSlash());
 
 // セッション管理用のミドルウェア
 app.use(async (c, next) => {
